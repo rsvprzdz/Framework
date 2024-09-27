@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+ <!-- * namespace: 현재 mapper 파일의 고유한 별칭 -->
+	<!-- 
+		resultMap : ResultSet 으로부터 조회된 컬럼값 하나씩 뽑아서 지정한 vo객체의
+					각 필드에 저장하는 작업을 하기 위한 설정
+					
+		<resultMap id="식별자" type="조회결과를담을vo객체(전체클래스명|별칭)">
+			<result column="컬럼명" property="필드명(vo)" />
+		</resultMap>
+	 -->
+	<resultMap id="memberResultSet" type="Member">
+		<result column="user_no" property="userNo" />
+		<result column="user_id" property="userId" />
+		<result column="user_pwd" property="userPwd" />
+		<result column="user_name" property="userName" />
+		<result column="email" property="email" />
+		<result column="birthday" property="birthday" />
+		<result column="gender" property="gender" />
+		<result column="phone" property="phone" />
+		<result column="address" property="address" />
+		<result column="enroll_date" property="enrollDate" />
+		<result column="modify_date" property="modifyDate" />
+		<result column="status" property="status" />
+	</resultMap>
+	
+	<!-- 
+		DQL(select) 작성
+		<select id="sql문식별자(별칭)"
+				resultMap="조회된 결과를 매핑할 resultMap의 id값"
+				또는 resultType="조회된 결과를 반환하고자 하는 타입"
+				[parameterType="전달받을 데이터타입(전체클래스명|별칭)"]>
+			실행할 SQL문
+		</select>
+		
+		* SQL문에 전달되는 데이터를 ?가 아닌 #{필드명 또는 변수명 또는 키값}와 같은 형식으로 작성하면
+		  내부적으로 전달된 객체로부터 값을 꺼내어 사용하게 됨
+	 -->
+	
+	<select id="loginMember" resultMap="memberResultSet" parameterType="Member">
+		SELECT *
+		   FROM MEMBER
+		  WHERE USER_ID = #{userId} AND  USER_PWD = #{userPwd} AND STATUS = 'Y'
+	</select>
+	
+	<!-- 
+		DML (insert/update/delete) 작성
+		
+		<insert|update|delete id="sql문 식별자"
+								[parameterType="전달받을 데이터타입(전체클래스명|별칭)"]>
+			실행할 SQL문
+		</insert|update|delete>
+	 -->
+	<insert id="insertMember" parameterType="Member">
+		INSERT INTO MEMBER (USER_NO
+						  , USER_ID
+						  , USER_PWD
+						  , USER_NAME
+						  , EMAIL
+						  , BIRTHDAY
+						  , GENDER
+						  , PHONE
+						  , ADDRESS)
+					VALUES ( SEQ_UNO.NEXTVAL
+						   , #{userId}
+						   , #{userPwd}
+						   , #{userName}
+						   , #{email}
+						   , #{birthday}
+						   , #{gender}
+						   , #{phone}
+						   , #{address} )	
+	</insert>
+	
+	<select id="idCheck" resultType="_int">
+		SELECT COUNT(*) COUNT
+		 FROM MEMBER
+		WHERE USER_ID = #{userId} AND STATUS = 'Y'
+	</select>	
+</mapper>
