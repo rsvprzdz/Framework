@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHL</title>
+
+    <link rel="stylesheet" href="static/css/common.css"/>
+	<link rel="stylesheet" href="static/css/spacious74.css"/>
+	
+	<script src="static/js/common.js"></script>
+</head>
+<body>
+    <!-- common/header.html 파일 표시 -->
+	<div th:insert="~{common/header :: //div[@class='radio-inputs']}"></div>
+	
+    <div class="outer card">
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>내용</th>
+                    <th>날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+	            <tr th:each="counsel : ${counselList}">
+	                <td>[[${counsel.title}]]</td>
+	                <td >[[${counsel.content}]]</td>
+	                <td >[[${counsel.createDate}]]</td>
+	            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

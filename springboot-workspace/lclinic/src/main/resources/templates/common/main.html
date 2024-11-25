@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHL</title>
+
+    <link rel="stylesheet" href="static/css/common.css"/>
+    	<link rel="stylesheet" href="static/css/spacious74.css">
+</head>
+<body>
+    <!-- common/header.html 파일 표시 -->
+  	<div th:insert="~{common/header :: //div[@class='radio-inputs']}"></div>
+
+    <div class="outer">
+        <div class="card font-dokdo d-flex flex-justify-content flex-align-items">
+
+            반갑습니다.
+            [[${ session.user.id }]] 님 ^^
+
+        </div>
+    </div>
+</body>
+</html>

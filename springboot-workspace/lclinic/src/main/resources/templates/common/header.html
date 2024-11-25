@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHL</title>
+	<link rel="stylesheet" href="static/css/spacious74.css">
+</head>
+
+<body>
+    <div class="radio-inputs">
+    	<!-- location 객체 사용해서 주소창의 주소를 바꿔주는 거기 때문에 get요청으로갈거임 -->
+        <label class="radio" onclick="location.href='/'">
+            <input type="radio" name="radio" checked="" />
+            <span class="name">Home</span>
+        </label>
+        <label class="radio" onclick="location.href='counsel'">
+            <input type="radio" name="radio" />
+            <span class="name">Counsel</span>
+        </label>
+    </div>
+
+</body>
+
+</html>

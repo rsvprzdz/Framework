@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello Boot</title>
+</head>
+<body>
+	<h2>Hello Boot</h2>
+	
+	<hr/>
+	
+	<div>
+		<div align="center">
+		<h2>Welcome Page</h2>
+		<hr/>
+		<p>
+			스프링 부트에서는 정적 및 템플릿에　대한　첫　페이지를　지원한다. <br/>
+			정적 콘텐츠 위치(<small>src/main/resources/static</small>)에서 index.html 파일을 찾고 <br/>
+			해당 파일이 없는 경우 템플릿 위치 (<small>src/main/resources/templates</small>)에서 템플릿 파일을 찾아 사용한다.
+			<br/><br/>
+			- 템플릿 엔진 : Thymeleaf, FreeMarker, JSP 등을 포함한 다양한 템플릿을 지원 => 동적 HTML 콘텐츠 제공
+		</p>
+		</div>
+		<hr/>
+		<h3>스프링부트의 특징</h3>
+		<ul>
+			<li>
+				스프링 레거시에서 수동으로 관리했던 설정들을 기본적으로 자동 설정 기능을 제공
+				<ul>
+					<li>
+						레거시에서 xml이나 자바 코드로 빈이나 의존성을 직접 관리했었는데,
+						부트에서는 대부분의 설정을 자동으로 처리해준다. (=> 설정관련해서는 크게 신경쓰지 않아도 됨!)
+					</li>
+				</ul>	
+			</li>
+			<li>
+				다양한 스타터 패키지를 제공하여 필요한 의존성을 묶어서 사용할 수 있게 해줌
+				<ul>
+					<li>
+						레거시에서는 우리가 직접 필요한 라이브러리 하나하나 찾아서 설정했는데,
+						스타터 패키지만 추가하면 해당 기능과 관련된 라이브러리들이 포함되어 있기 때문에 크게 신경쓰지 않아도됨!
+					</li>
+					<li>
+						ex) spring-boot-starter-web의 경우에는 내장톰캣서버, spring mvc, restful 관련 기본 요소들을 포함하고 있음
+					</li>
+				</ul>
+			</li>
+			<li>
+				내장 서버를 기본으로 제공하기 때문에 외부 서버(톰캣)를 사용하지 않고 실행 가능
+				<ul>
+					<li>
+						이전에는 톰캣 서버를 설치하여 사용했는데,
+						spring-boot-starter-web 패키지를 추가하면 톰캣을 내장하고 있기 때문에
+						별도로 설치하지 않고 실행이 가능함!
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<hr/>
+	<a href="practice">연습페이지로 이동</a>
+	<a href="test">테스트 페이지로 이동</a>
+</body>
+</html>

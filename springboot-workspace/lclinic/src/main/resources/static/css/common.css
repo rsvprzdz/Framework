@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+html, body {margin:0; padding:0;}
+body {height: 100vh; background-color: #9babab;}
+
+
+.outer { height: 80%; }
+
+.d-flex { display: flex; }
+.flex-justify-content { justify-content: center; }
+.flex-align-items { align-items: center; }
+
+.d-inline-block { display: inline-block; }
+
+
+.font-dokdo { font-size: 3em; font-family: "Dokdo", system-ui; }
+
+.card {
+    width: 80%;
+    height: 80%;
+
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 50px;
+
+    box-shadow: #4a5c6a 0px 0px 20px 12px;
+    background: #11212d; color: #ccd0cf;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+tr, th, td { border-bottom: 1px solid #9babab; border-collapse: collapse; padding: 1.1em; }
+tbody tr:hover { background-color: #9babab; color: #11212d;   }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KH Email</title>
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <div class="bg-dark p-5 h-100">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <label for="email">Email address</label>
+          </div>
+        </div>
+        <div class="col">
+          <button type="button" id="btn-auth" class="btn btn-secondary h-100">
+			    <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          	인증 요청          	
+          </button>
+          &nbsp;<span id="timer" class="text-light"></span>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col">
+          <div class="form-floating">
+            <input type="password" class="form-control" id="authCode" placeholder="Authorization Code">
+            <label for="authCode">Authorization Code</label>
+          </div>
+        </div>
+        <div class="col">
+          <button type="button" id="btn-check" class="btn btn-secondary h-100">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

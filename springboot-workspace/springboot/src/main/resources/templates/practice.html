@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>연습페이지</h2>
+	
+	<hr/>
+	
+	<h3>Request 영역의 데이터 추출</h3>
+	<p th:text="${ name }"></p>
+	<input type="text" th:value="${ name } " />
+	
+	<h3>Session 영역의 데이터 추출</h3>
+	<p th:text="${ session.age }"></p>
+	<input type="text" th:value="${ session.age }" />
+	
+	<hr/>
+	
+	<h3>조건문</h3>
+	<div th:if="${ session.age >= 20 }">
+		성인입니다.
+	</div>
+	<div th:unless = "${ session.age >= 20 }">
+		성인이 아닙니다.
+	</div>
+	
+	<hr/>
+	
+	<h3>반복문</h3>
+	<ul>
+		<th:block th:each="i : ${#numbers.sequence(1, 5)}">
+		<li th:text="${ i }"></li>
+		</th:block>
+	</ul>
+	
+	<hr/>
+	
+	<div>
+		<h3>저장된 값 그대로 출력</h3>
+		[[${title}]]
+	</div>
+	<div>
+		<h3>HTML을 해석아여 출력</h3>
+		[(${title})]
+	</div>
+</body>
+</html>

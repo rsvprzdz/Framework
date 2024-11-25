@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHL</title>
+
+    <link rel="stylesheet" href="css/dull-mole-77.css" />
+
+    <style>
+       body { background-color: #06141b; padding: 0; margin: 0; }    
+       
+       .main-content { height: 100vh; display: flex; justify-content: center; align-items: center; }
+
+       .login-area { width: 500px; height: 500px;
+                     background-color: #4a5c6a87;
+                     color: #ccd0cf;
+
+                     border-radius: 50px;
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     padding: 2em;
+                    }
+        .login-area hr { width: 100%; }
+    </style>
+</head>
+<body>
+            
+    <div class="main-content">
+        <div class="login-area">
+            <h2>KHL 상담소</h2>
+            <hr/>
+
+            <br/>
+
+            <!-- From Uiverse.io by bociKond -->
+            <form class="form" action="login" method="post">
+                <span class="input-span">
+                    <label for="id" class="label">ID</label>
+                    <input type="text" name="id" id="id" />
+                </span>
+                <span class="input-span">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" name="password" id="password" />
+                </span>
+                <br>
+                <input class="submit" type="submit" value="Log in" />
+                <span class="span">Don't have an account? <a href="#">Sign up</a></span>
+            </form>
+
+            </div>        
+        </div>
+    </body>
+</html>

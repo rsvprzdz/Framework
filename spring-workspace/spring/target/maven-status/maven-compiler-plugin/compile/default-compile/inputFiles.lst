@@ -1,0 +1,17 @@
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\common\aspect\LoggingAOP.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\model\vo\Board.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\model\vo\Member.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\model\vo\MemberPractice.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\controller\BoardController.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\model\dao\BoardDao.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\common\interceptor\LoginInterceptor.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\common\model\vo\PageInfo.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\service\MemberServiceImpl.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\service\MemberService.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\controller\MemberControllerPractice.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\service\BoardServiceImpl.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\model\dao\MemberDao.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\member\controller\MemberController.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\service\BoardService.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\common\template\Pagination.java
+C:\workspace\6_framework\spring-workspace\spring\src\main\java\com\kh\spring\board\model\vo\Reply.java
